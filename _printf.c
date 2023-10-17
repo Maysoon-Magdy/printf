@@ -48,6 +48,17 @@ int define_printf_format(const char *format, va_list args_List)
 	return (char_len);
 }
 
+
+/**
+ * clear - A function that cleaning printf.
+ *@args_List: the argument list instialized
+ */
+void clear(va_list args_List)
+{
+	va_end(args_List);
+}
+
+
 /**
  * _printf - a funtion that prints the given values
  * @format: string to be printed
@@ -64,7 +75,7 @@ int _printf(const char *format, ...)
 
 	va_start(args_List, format);
 	char_ret = define_printf_format(format, args_List);
-	va_end(args_List);
+	clear(args_List);
 	return (char_ret);
 }
 
