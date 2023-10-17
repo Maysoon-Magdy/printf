@@ -1,4 +1,9 @@
 #include "main.h"
+
+void clear(va_list args_List);
+int define_printf_format(const char *format, va_list args_List);
+int _printf(const char *format, ...);
+
 /**
  * define_printf_format - Afunction to defint the format string
  * @format: the format string
